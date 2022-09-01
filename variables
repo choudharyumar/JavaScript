@@ -1,7 +1,0 @@
-let admin;
-let name;
-name='john';
-admin=name;
-let newUser='ali';
-const dayOfBirth='2.12.2022';
-console.log(admin,newUser,dayOfBirth);
