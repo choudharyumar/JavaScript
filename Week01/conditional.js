@@ -104,5 +104,8 @@ switch (age) {
        
         console.log('you are not in data');
         break;
+    
         
 }
+
+
