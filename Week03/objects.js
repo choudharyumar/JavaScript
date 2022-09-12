@@ -82,17 +82,37 @@
 
 // property name limitations:
 
+// let obj={
+//     for:1,
+//     return:2,
+//     let:3,
+//     loop:4,
+//     nor:5
+    
+// };
+// console.log(obj.for+obj.return+obj.let+obj.loop+obj.nor)
+
+
+// in this code there are no issue of strings and symbols
+
+// let x={
+//     0:'test',
+//     4:'g umar bhi'
+
+// };
+// console.log(x[0])
+// console.log(x[4])
+
+
+
+// let obj = {};
+// obj.__proto__ = 5; // assign a number
+// alert(obj.__proto__);
+
 let obj={
-    for:1,
-    return:2,
-    let:3,
-    loop:4
+    a__proto__:5,
 };
-console.log(obj.for+obj.return+obj.let+obj.loop)
-let x={
-    0:'test'
-};
-console.log(x[0])
+console.log(obj.a__proto__)
 
 
 
