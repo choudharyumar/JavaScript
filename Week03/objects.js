@@ -106,16 +106,89 @@
 
 
 // let obj = {};
-// obj.__proto__ = 5; // assign a number
+// obj.__proto__ = 5; // assign a number  this isb an object which shows always a object 
 // alert(obj.__proto__);
 
-let obj={
-    a__proto__:5,
-};
-console.log(obj.a__proto__)
+// let obj={
+//     a__proto__:5,
+// };
+// console.log(obj.a__proto__)
+
+// property existance in object
+// let user={
+//     name:'irfan',
+//     age:40
+// }
+// console.log('name' in user)
+// console.log('age' in user)
+// console.log('40' in user)
+
+// let obj={
+// list:4
+// }
+// console.log(obj.noSuchproperty===undefined)//  it gives us true
+
+
+// program when a property exits but sve no value
+
+// let x={
+//     test:undefined
+// }
+// console.log(x.test)
+// console.log('test' in x)
 
 
 
+// for in objects
+// let x={
+//     name:'umr',
+//     age:30,
+//     class:5
+// };
+// for(key in x)
+// {
+//     console.log(key)
+//     console.log(x[key])
+// }
+
+
+// ordered like an object
+
+// let codes={
+//     49:'for grmny',
+//     51:'for paki',
+//     45:'for india'
+// }
+
+// codes.warn='iran';
+// delete codes[51];
+// for(code in codes)
+// {
+//     console.log(code)
+//     console.log(codes[code])
+    
+// }
+
+
+//Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
+
+
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+  };
+
+    function multiplyNumeric(menu) {
+        for (let key in menu) {
+          if (typeof menu[key] == 'number') {
+            menu[key] *= 2;
+          }
+          console.log(menu[key])
+        }
+
+      }
+      multiplyNumeric(menu);
 
 
 
