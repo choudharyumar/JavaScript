@@ -1,0 +1,42 @@
+
+// reachability
+// let user={
+//     name:'umar',
+// }
+// user=null;
+
+// console.log(user)
+
+
+// two refrences
+// let x={
+//     name:'umar'
+
+// }
+//     let admin=x;  // the value is saved in memoory of admin
+//     user=null;
+//     console.log(admin.name)
+
+
+
+    // interlinke objects
+    function marry(man, woman) {
+        woman.husband = man;
+        man.wife = woman;
+      
+        return {
+          father: man,
+          mother: woman
+        }
+      }
+      
+      let family = marry({
+        name: "John"
+      }, {
+        name: "Ann"
+      });
+    //   console.log(marry)
+    //   console.log(family)
+      family=null; // un reachable island
+      console.log(marry)
+      console.log(family)
