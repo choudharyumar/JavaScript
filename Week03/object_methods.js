@@ -92,24 +92,45 @@
 // sum() returns the sum of saved values.
 // mul() multiplies saved values and returns the result.
 
-let calculator={
-    sum(){
-        return this.a+this.b;
+// let calculator={
+//     sum(){
+//         return this.a+this.b;
+//     },
+//     mul(){
+//        return this.a*this.b;
+
+//     },
+//     read(){
+//         this.a=+prompt('a?',4);
+//         this.b=+prompt('b?',5);
+//     }
+// };
+// calculator.read();
+// console.log(calculator.sum());
+// console.log(calculator.mul());
+
+
+
+// chaining
+let ladder={
+    step:0,
+    up(){
+      this.step++;
+      return this;
     },
-    mul(){
-       return this.a*this.b;
+    down(){
+      this.step--;
+      return this;
 
     },
-    read(){
-        this.a=+prompt('a?',4);
-        this.b=+prompt('b?',5);
+    showStep()
+    {
+      console.log(this.step)
+      return this;
     }
-};
-calculator.read();
-console.log(calculator.sum());
-console.log(calculator.mul());
-
-
+  }
+  ladder.up().showStep();
+  ladder.down().showStep();
 
 
 
