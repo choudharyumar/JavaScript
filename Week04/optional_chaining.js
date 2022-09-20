@@ -109,8 +109,8 @@
 let user1={
     street6:4,
 }
-user1?.street5?.street6;
-console.log(user1?.street5?.street6)  // this gives undefined
+//user1?.street6;
+console.log(user1?.[street6])  
 
     
 
