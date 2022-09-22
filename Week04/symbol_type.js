@@ -55,14 +55,60 @@
 
 
 /////Symbols in an object literal:
-let id =Symbol('123');
-let obj={
-    name:'umar',
-    [id]:123
-}
-console.log(obj[id])// 123
+// let id =Symbol('123');
+// let obj={
+//     name:'umar',
+//     [id]:123
+// }
+// console.log(obj[id])// 123
 
-obj[id]='234';
-console.log(obj[id])//234
+// obj[id]='234';
+// console.log(obj[id])//234
+
+
+///Symbols are skipped by for…in:
+
+// let id=Symbol('id');
+// let user={
+//     name:'umar',
+//     age:34,
+//     [id]:123,
+// }
+// for(let key in user)
+// {
+//     console.log(key)
+
+// console.log(user[key])// symbol dont work in for in loops
+
+// }
+// console.log('direct:'+user[id])
+
+
+
+/// symbols in object
+// let id=Symbol('id');
+// let user={
+//     name:'umar ',
+//     age:34,
+//     [id]:123
+// }
+// let clone=Object.assign({},user);
+// console.log(clone.name)
+// console.log(clone[id])
+
+
+
+/// global symbols:
+let id=Symbol.for('di');
+let idAgain=Symbol.for('di');
+console.log(id===idAgain)
+
+
+
+let i=10;
+console.log(i)
+
+
+
 
 
