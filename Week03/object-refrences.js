@@ -78,38 +78,38 @@
 
 
 // nested clonning
-// let x={
-//     height:50,
-//     length:43,
-
-//  y:{
-//     width:45
-// }
-// };
-
-// let clone=Object.assign({},x);
-// //console.log( x.y === clone.y );
-// //x.y.width = 60;
-// //Object.assign(x,y);
-// console.log(clone.y.width)
-// x.y.width = 60;
-// console.log(clone.y.width)
-
-
-
-// stuructured clone
 let x={
     height:50,
     length:43,
 
  y:{
-    width:456
+    width:45
 }
 };
 
-let clone = structuredClone(x);
-x.y.width=45
+let clone=Object.assign({},x);
+//console.log( x.y === clone.y );
+//x.y.width = 60;
+//Object.assign(x,y);
 console.log(clone.y.width)
+x.y.width = 60;
+console.log(clone.y.width)
+
+
+
+// stuructured clone
+// let x={
+//     height:50,
+//     length:43,
+
+//  y:{
+//     width:456
+// }
+// };
+
+// let clone = structuredClone(x);
+// x.y.width=45
+// console.log(clone.y.width)
 
 
 
