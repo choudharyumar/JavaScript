@@ -99,14 +99,19 @@
 
 
 /// global symbols:
+// let id=Symbol.for('di');
+// let idAgain=Symbol.for('di');
+// console.log(id===idAgain)
+
+
+
 let id=Symbol.for('di');
 let idAgain=Symbol.for('di');
 console.log(id===idAgain)
 
 
 
-let i=10;
-console.log(i)
+
 
 
 
