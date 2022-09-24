@@ -101,13 +101,32 @@
 /// global symbols:
 // let id=Symbol.for('di');
 // let idAgain=Symbol.for('di');
-// console.log(id===idAgain)
+// console.log(id===idAgain)// trrue
 
 
 
-let id=Symbol.for('di');
-let idAgain=Symbol.for('di');
-console.log(id===idAgain)
+// let id=Symbol.for('di');
+// let idAgain=Symbol.for('123');
+// console.log(id===idAgain)  // false
+
+
+
+///Symbol.keyFor:
+
+// let sym1=Symbol.for('name');
+// let sym2=Symbol.for('age');
+// console.log(Symbol.keyFor(sym1));
+// console.log(Symbol.keyFor(sym2));
+
+// if the symbol.key for not presnet than if we cll it then it gives the answer of undefined
+
+
+let sym1=Symbol.for('name');
+let sym2=Symbol('age');
+console.log(Symbol.keyFor(sym1));//name
+console.log(Symbol.keyFor(sym2));// undefined
+console.log(sym2.description)// for local variable
+
 
 
 
