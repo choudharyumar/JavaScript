@@ -44,3 +44,8 @@
 
 let num=Number('hall g ki krdy');
 console.log(typeof num)
+
+
+
+let i=20;
+console.log(i)
