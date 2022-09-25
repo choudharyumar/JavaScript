@@ -32,5 +32,5 @@
 
 let a=3;
 let result=5;
- result*=a;
+ result*=a;  // result=result*a  //5*3=15
 console.log(result)
