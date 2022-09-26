@@ -47,5 +47,5 @@ console.log(typeof num)
 
 
 
-let i=20;
+let i=30;
 console.log(i)
