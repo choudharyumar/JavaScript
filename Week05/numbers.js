@@ -72,5 +72,39 @@
 
 
 
-let num=+prompt('enter a number','');
-console.log(isFinite(num))
+// let num=+prompt('enter a number','');
+// console.log(isFinite(num))
+
+
+/// is NAN AND IS FINITE
+// console.log(Number.isNaN(NaN))//true
+// console.log(Number.isNaN('str'))//false
+// console.log(Number.isNaN('str'/2))//true
+
+
+
+// console.log(Number.isFinite(123))//true
+// console.log(Number.isFinite(1123/2))//true
+// console.log(Number.isFinite(1123/0))//false
+// console.log(Number.isFinite('254548'))//false
+
+// console.log(Number.isFinite(Infinity))//false
+
+
+///
+Object.is(NaN,NaN)
+console.log(0===-0)
+Object.is(0,-0)
+let a,b;
+Object.is(a,b)
+console.log(a===b)
+
+
+
+
+
+
+
+
+
+
