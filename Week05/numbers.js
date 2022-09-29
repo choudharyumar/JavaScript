@@ -91,13 +91,47 @@
 // console.log(Number.isFinite(Infinity))//false
 
 
-///
-Object.is(NaN,NaN)
-console.log(0===-0)
-Object.is(0,-0)
-let a,b;
-Object.is(a,b)
-console.log(a===b)
+///object.js
+// Object.is(NaN,NaN)
+// console.log(0===-0)
+// Object.is(0,-0)
+// let a,b;
+// Object.is(a,b)
+// console.log(a===b)
+
+
+
+/// parseint and parseflloat:
+// console.log(+'1234')//1234
+// console.log(+'1234ppx')//Nan
+// console.log(parseInt('1234pfpkf'))
+// console.log(parseInt('1234.df'))
+// console.log(parseInt('1234.878'))
+// console.log(parseFloat('1234.253'))
+// console.log(parseFloat(1234.454))
+// console.log(parseFloat('1234.2.53'))
+// console.log(parseFloat('b1234.254'))
+
+
+
+/// returns the numeric values 
+// console.log(parseInt('ff',16))//255
+// console.log(parseInt('2n9c',36))//123456
+
+
+
+
+//other math functions
+console.log(Math.max(1,8,9,-1,-3))
+console.log(Math.min(1,8,9,-1,-3)) 
+console.log(Math.random())
+console.log(Math.pow(4,2))
+
+
+
+
+
+
 
 
 
