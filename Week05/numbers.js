@@ -128,6 +128,11 @@ console.log(Math.random())
 console.log(Math.pow(4,2))
 
 
+let i=10;
+console.log(i)
+
+
+
 
 
 
