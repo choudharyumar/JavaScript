@@ -132,6 +132,8 @@ let i=10;
 console.log(i)
 
 
+console.log ('please work hard and keep on learning this is the lesson in life')
+
 
 
 
