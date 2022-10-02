@@ -122,19 +122,63 @@
 
 
 //other math functions
-console.log(Math.max(1,8,9,-1,-3))
-console.log(Math.min(1,8,9,-1,-3)) 
-console.log(Math.random())
-console.log(Math.pow(4,2))
+// console.log(Math.max(1,8,9,-1,-3))
+// console.log(Math.min(1,8,9,-1,-3)) 
+// console.log(Math.random())
+// console.log(Math.pow(4,2))
 
 
-let i=10;
-console.log(i)
+// let i=10;
+// console.log(i)
 
 
-console.log ('please work hard and keep on learning this is the lesson in life')
+// console.log ('please work hard and keep on learning this is the lesson in life')
 
 
+/// tasks:
+// program to sum numbers from the visitor
+// let a,b;
+//  let num1=+prompt('enter the numbers',a);
+//  let num2=+prompt('enter the numbers',b);
+//  console.log(  'sum of two numbers',num1+num2)
+
+// console.log(6.35.toFixed(1))
+// let num=6.65;
+ //console.log(Math.round(num))
+//  console.log(6.35.toFixed(20))
+
+
+
+// console.log(Math.floor(6.36566))
+// console.log(Math.ceil(6.36566))
+
+
+
+
+
+
+
+/// other program:
+//Create a function readNumber which prompts for a number until the visitor enters a valid numeric value.
+
+//The resulting value must be returned as a number.
+
+//The visitor can also stop the process by entering an empty line or pressing “CANCEL”. In that case, the function should return null.
+
+
+function readNumber(){
+    let num;
+    do {
+        num = prompt("Enter a number please?", 0);
+      } while ( !isFinite(num) );
+   
+    if(num===null || num==='')
+    {
+        return +num; 
+    }
+
+}
+console.log('read:',readNumber());
 
 
 
