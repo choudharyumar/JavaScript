@@ -29,4 +29,8 @@
 
 console.log('here is ch\'umar')
 console.log( `My\n`.length ); // 3
-console.log('haji'.length);
+console.log('haji'.length);//4
+
+
+let i=10;
+console.log(i)
