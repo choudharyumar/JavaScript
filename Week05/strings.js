@@ -32,5 +32,5 @@ console.log( `My\n`.length ); // 3
 console.log('haji'.length);//4
 
 
-let i=10;
+let i=20;
 console.log(i)
