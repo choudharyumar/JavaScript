@@ -73,10 +73,26 @@
 
 
 ///Changing the case:
-console.log('HOW ARE YOU'.toLocaleLowerCase())//how are you
-console.log('how are you'.toLocaleUpperCase())//HW ARE YOU
-console.log('HOW ARE YOU'[4].toLocaleLowerCase())//a
-console.log('how are you'.toLocaleUpperCase())//A
+// console.log('HOW ARE YOU'.toLocaleLowerCase())//how are you
+// console.log('how are you'.toLocaleUpperCase())//HW ARE YOU
+// console.log('HOW ARE YOU'[4].toLocaleLowerCase())//a
+// console.log('how are you'.toLocaleUpperCase())//A
+
+
+///str.indexOf:
+// let str='widget';
+// console.log(str.indexOf('widget'))
+// console.log(str.indexOf('WIDGET'))
+// console.log(str.indexOf('id'))
+
+
+let stri='helo how are you are';
+console.log(stri.indexOf('are',12))
+console.log(stri.indexOf('are'))
+// another program:
+// let str=' helo how are you you are the one and here are you';
+
+
 
 
 
