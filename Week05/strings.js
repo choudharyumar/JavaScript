@@ -191,16 +191,23 @@
 // console.log(checkSpam('this is innocent rabbit'))
 
 
-function truncate(str, maxlength) {
-    return (str.length > maxlength) ?
-      str.slice(0, maxlength - 1) + '…' : str;
-  }
+// function truncate(str, maxlength) {
+//     return (str.length > maxlength) ?
+//       str.slice(0, maxlength - 1) + '…' : str;
+//   }
 
-  console.log(truncate("What I'd like to tell on this topic is:", 20));
-
-
+//   console.log(truncate("What I'd like to tell on this topic is:", 20));
 
 
+
+// function extractCurrencyValue(str) 
+// {
+//     return +str.slice(1);
+// }
+// console.log(extractCurrencyValue('$120'))
+
+let str = '$120';
+console.log(str.slice(1))
 
 
 
