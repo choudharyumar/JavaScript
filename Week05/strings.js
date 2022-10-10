@@ -199,15 +199,16 @@
 //   console.log(truncate("What I'd like to tell on this topic is:", 20));
 
 
-
+/// create a function of currency that starts with the real value not eith the sign
 // function extractCurrencyValue(str) 
 // {
 //     return +str.slice(1);
 // }
 // console.log(extractCurrencyValue('$120'))
 
-let str = '$120';
-console.log(str.slice(1))
+
+
+
 
 
 
