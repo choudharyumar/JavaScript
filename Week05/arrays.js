@@ -84,6 +84,9 @@
 // }
 
 
+
+
+
 // another way to use loof that was for..of loop
 // let count=['a','b','c'];
 // for(let counts of count)
@@ -94,13 +97,81 @@
 
 
 /// we use it like objects 
-let count=['a','b','c'];
-for(let key in count)
-{
+// let count=['a','b','c'];
+// for(let key in count)
+// {
  
-  console.log(key)
-  console.log(count[key])
+//   console.log(key)
+//   console.log(count[key])
 
-}
+// }
+
+
+
+// /// array are different in lengths:
+// let arr=[];
+// arr[1223]='apple';
+// console.log(arr.length)
+
+// let arr=[1,2,3,4,5]
+// arr.length=2;
+// console.log(arr)
+// arr.length=1;
+// console.log(arr[0])
+
+// new array
+
+// let arr= new Array('apple','haji');
+// console.log(arr[1])
+
+
+
+// let arr=new Array(3)
+// console.log(arr.length)//3
+// console.log(arr)//empty
+
+
+// Multidimensional arrays
+
+// let arr=[
+//   [1,3,5],
+//   [1,2,3],
+//   [1,8,9]
+// ]
+// console.log(arr[2][2])
+// console.log(arr[1][0])
+
+
+
+///toString
+
+// let arr=[1,3,2]
+// console.log(String(arr)==='1,3,2')
+
+// console.log([]+1)
+// console.log([1]+1)
+// console.log(['1,2']+1)
+
+
+// when a string add in something than it also converts it to string
+
+
+// console.log(''+1)
+// console.log('1'+1)
+// console.log('1,213'+1)
+
+
+
+// Don’t compare arrays with ==
+
+console.log([]==[])
+console.log([2]==[2])
+console.log([]===[])
+console.log(0==[])
+
+
+
+
+
 
 
