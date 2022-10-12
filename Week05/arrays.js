@@ -164,10 +164,10 @@
 
 // Don’t compare arrays with ==
 
-console.log([]==[])
-console.log([2]==[2])
-console.log([]===[])
-console.log(0==[])
+console.log([]==[])///f
+console.log([2]==[2])//f
+console.log([]===[])//f
+console.log(0==[])//T
 
 
 
