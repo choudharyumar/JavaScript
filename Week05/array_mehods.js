@@ -191,13 +191,44 @@
 
 
 // split
-let arr2='haji';
-console.log(arr2.split(''))//h,a,j,i
+// let arr2='haji';
+// console.log(arr2.split(''))//h,a,j,i
 
 
-//join
-let arr3=['haji','mukhtar','dil'];
-let str=arr3.join(',')
-console.log(str)
+// //join
+// let arr3=['haji','mukhtar','dil'];
+// let str=arr3.join(',')
+// console.log(str)
+
+
+// reduce/reduce eight
+// let arr1=[2,3,4,5,6]
+// console.log(arr1.reduce((sum,count)=>sum+count))
+
+
+// Most methods support “thisArg”
+let army={
+    minage:18,
+    maxage:27,
+    canjoin(user){
+        return user.age >= this.minage && user.age<this.maxage;
+    },
+};
+let users=[
+{age:17},
+{age:19},
+
+{age:20},
+
+{age:2},
+
+{age:28},
+
+]
+let soldier=users.filter(army.canjoin,army)
+console.log(soldier[0])
+console.log(soldier[1])
+console.log(soldier[2])
+console.log(soldier[3])
 
 
