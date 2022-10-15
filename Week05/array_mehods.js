@@ -207,28 +207,227 @@
 
 
 // Most methods support “thisArg”
-let army={
-    minage:18,
-    maxage:27,
-    canjoin(user){
-        return user.age >= this.minage && user.age<this.maxage;
-    },
-};
-let users=[
-{age:17},
-{age:19},
+// let army={
+//     minage:18,
+//     maxage:27,
+//     canjoin(user){
+//         return user.age >= this.minage && user.age<this.maxage;
+//     },
+// };
+// let users=[
+// {age:17},
+// {age:19},
 
-{age:20},
+// {age:20},
 
-{age:2},
+// {age:2},
 
-{age:28},
+// {age:28},
 
-]
-let soldier=users.filter(army.canjoin,army)
-console.log(soldier[0])
-console.log(soldier[1])
-console.log(soldier[2])
-console.log(soldier[3])
+// ]
+// let soldier=users.filter(army.canjoin,army)
+// console.log(soldier[0])
+// console.log(soldier[1])
+// console.log(soldier[2])
+// console.log(soldier[3])
+
+
+// //differnet programs
+
+
+
+// Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+
+
+// let str='background-color,list-style-image,-webkit-transition';
+// function camelize(str)
+// {
+//     return str
+//     .split('-')
+//     .map(
+//         (word,index)=>index==0? word:word[0].toUpperCase()+word.slice(1)
+//         )
+//         .join('');
+// }
+
+// console.log(camelize('background-color'));
+// console.log(camelize("list-style-image")) ;
+// console.log(camelize("-webkit-transition"));
+
+
+
+// /filter range program:
+
+
+// let arr=[5,3,8,1];
+// function filterRange(arr, a, b)
+// {
+//     return arr.filter(item => (a <= item && item <= b));
+    
+// }
+
+// let filtered=filterRange(arr,1,5);
+// console.log(filtered)
+// console.log(arr)
+
+
+
+// Filter range "in place"
+
+
+// function filterRangeInPlace(arr, a, b)
+// {
+//     for(let i=0;i<arr.length;i++)
+//     {
+
+//         let val=arr[i];
+
+//     if(val<a||val>b)
+//     {
+//         arr.splice(i,1);
+//         i--;
+//     }
+// }
+    
+// }
+// let arr = [5, 3, 8, 1];
+
+// filterRangeInPlace(arr, 1, 4);
+// console.log(arr)
+
+
+// Sort in decreasing order
+
+// let arr1=[5, 2, 1, -10, 8];
+// arr1.sort((a,b)=>b-a);
+// console.log(arr1)
+
+// Copy and sort array
+
+
+// let arr = ["HTML", "JavaScript", "CSS"];
+// function copySorted()
+// {
+//     return arr.slice().sort();
+// }
+// let sorted=copySorted()
+// console.log (sorted)
+// console.log(arr)
+
+
+// Map to names
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let users = [ john, pete, mary ];
+// let names =users.map(item=>item.name);
+// console.log(names)
+
+// Map to objects
+
+
+// let john = { name: "John", surname: "Smith", id: 1 };
+// let pete = { name: "Pete", surname: "Hunt", id: 2 };
+// let mary = { name: "Mary", surname: "Key", id: 3 };
+
+// let users = [ john, pete, mary ];
+
+// let usersMapped =users.map(user=>(
+//     {fullname:`${user.name}${user.surname}`,
+//     id: user.id}
+//     ));
+// console.log(usersMapped[0].id)
+// console.log(usersMapped[0].fullname)
+
+
+// Sort users by age
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let arr = [ pete, john, mary ];
+
+//  function sortByAge(arr){
+//     return arr.sort((a,b)=>a.age-b.age);
+//  }
+//  sortByAge(arr);
+//  console.log(arr[0].name);
+//  console.log(arr[1].name);
+
+//  console.log(arr[2].name);
+
+
+
+
+
+// sort users by name
+
+
+//  let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let arr = [ pete, john, mary ];
+
+//  function sortByAge(arr){
+//     return arr.sort((a, b) => (a.name > b.name ? 1 : -1));
+//  }
+//  sortByAge(arr);
+//  console.log(arr[0].name);
+//  console.log(arr[1].name);
+
+//  console.log(arr[2].name);
+
+
+//  shuffle the array
+
+// function shuffle(arr) {
+//     arr.sort(() => Math.random() - 0.5);
+//   }
+  
+//   let arr = [1, 2, 3];
+//   shuffle(arr);
+//   console.log(arr);
+  
+
+
+
+//   Get average age
+  // function getAverageAge(users) {
+  //   return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+  // }
+  
+  // let john = { name: "John", age: 25 };
+  // let pete = { name: "Pete", age: 30 };
+  // let mary = { name: "Mary", age: 29 };
+  
+  // let arr = [ john, pete, mary ];
+  
+  // console.log( getAverageAge(arr) ); // 28
+
+
+
+  // Filter unique array members
+
+  function unique(arr) {
+    let result =[];
+    for(let str of arr)
+    {
+      if(!result.includes(str))
+      arr.push(str)
+    }
+    return result;
+    
+  }
+  
+  let strings = ["Hare", "Krishna", "Hare", "Krishna",
+    "Krishna", "Krishna", "Hare", "Hare", ":-O"
+  ];
+  
+  console.log( unique(strings) );
+
 
 
