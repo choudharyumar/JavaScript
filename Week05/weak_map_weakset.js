@@ -161,6 +161,9 @@
   //   console.log(key.text)
 
   // }
+
+
+  // practice
   let map=new WeakSet()
   let obj1={name:'u'}
   let obj2={name:'u'}
@@ -168,7 +171,7 @@
   map.add(obj2)
   console.log(map.has(obj1))
    delete obj1;
-   obj1=null;
+  obj1=null;
   console.log(map.has(obj1))
   console.log(map.has(obj2))
 
