@@ -106,7 +106,7 @@ let user = {
     name: 'John',
     age: 30
   };
-  console.log(Object.keys(user.length))
+  console.log(Object.keys(user))
  function count(user)
  {
  return Object.keys(user).length;
