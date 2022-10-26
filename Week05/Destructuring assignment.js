@@ -63,11 +63,11 @@
 
 //  Looping with .entries():
 
-let obj={name:'umar',age:34};
+// let obj={name:'umar',age:34};
 
-for (let [key,value] of Object.entries(obj))
+// for (let [key,value] of Object.entries(obj))
 
-console.log(`${key}:${value}`)
+// console.log(`${key}:${value}`)
 
 
 
@@ -103,10 +103,110 @@ console.log(`${key}:${value}`)
 
 // using  ...title
 
-let [name,age,...titles] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
-console.log(name)
-console.log(age)
-console.log(...titles)
+// let [name,age,...titles] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+// console.log(name)
+// console.log(age)
+// console.log(...titles)
+
+
+// default values:
+
+
+
+
+// default values
+// let [name = "Guest", surname = "Anonymous"] = ["Julius"];
+// console.log(name)
+// console.log(surname)
+
+
+//  let [name=prompt('name?'),surname=prompt('surname?')]=['ali'];
+//  console.log(name)
+//  console.log(surname)
+
+
+
+
+//  Object destructuring:
+
+
+
+// let obj={
+//     title:'menu',
+//     width:100,
+//     height:300
+// }
+// let{width,height,title}=obj;
+// console.log(width)
+// console.log(height)
+// console.log(title)
+
+
+
+// let obj={
+//     title:'menu',
+//     width:100,
+//     height:300
+// }
+// let{width:w,height:h,title:t}=obj;
+// console.log(w)
+// console.log(h)
+// console.log(t)
+
+// find miising property with "="
+
+// let obj={
+//     title:'menu',
+    
+// }
+// let{width=300,height=200,title}=obj;
+// console.log(width)
+// console.log(height)
+// console.log(title)
+
+
+
+// by another way
+
+// let obj={
+//     title:'menu',
+    
+// }
+// let{width:w=200,height:h=100,title:t}=obj;
+// console.log(w)
+// console.log(h)
+// console.log(t)
+
+
+// In the code below prompt asks for width, but not for title:
+
+
+
+// let obj={
+//     title:'menu'
+// }
+// let {title=prompt('tittle?'),width=prompt('width?')}=obj;
+// console.log(title)
+// console.log(width)
+
+
+
+// The rest pattern “…”:
+
+
+
+let obj={
+    title:'menu',
+    width:100,
+    height:300
+}
+
+let {tittle, ...rest}=obj;
+console.log(tittle)
+console.log(rest[0])
+console.log(rest[1])
+
+
 
 
 
