@@ -43,25 +43,75 @@
 // console.log(c)
 
 
-let [one,two,three,four] =new Set([1,2,3,4]);
-console.log(one);
-console.log(two)
+// let [one,two,three,four] =new Set([1,2,3,4]);
+// console.log(one);
+// console.log(two)
 
-console.log(three)
-
+// console.log(three)
+//console.log(four)
+//
 
 
 // Assign to anything at the left-side:
 
-let user={};
- [user.firstname,user.surname,user.title]='umar hayat biography'.split(' ');
- console.log(user.firstname)
- console.log(user.surname)
- console.log(user.title)
+// let user={};
+//  [user.firstname,user.surname,user.title]='umar hayat biography'.split(' ');
+//  console.log(user.firstname)
+//  console.log(user.surname)
+//  console.log(user.title)
+
+
+//  Looping with .entries():
+
+let obj={name:'umar',age:34};
+
+for (let [key,value] of Object.entries(obj))
+
+console.log(`${key}:${value}`)
+
+
+
+// another method:
+
+// let user=new Map();
+// user.set('name','umar')
+// .set('age','34')
+// for (let [key ,value] of user)
+// {
+//     console.log(`${key}:${value}`)
+// }
+
+
+// // Swap variables trick:
+// let guest='ali';
+// let admin='umar';
+// [guest,admin]=[admin,guest];
+// console.log(`${guest}:${admin}`);// swaping varialbles
+
+
+
+// The rest ‘…’:
+
+
+// let [name,age,...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+// console.log(name)
+// console.log(age)
+// console.log(rest[0])
+// console.log(rest[1])
+//console.log(rest.length)
+
+
+// using  ...title
+
+let [name,age,...titles] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+console.log(name)
+console.log(age)
+console.log(...titles)
 
 
 
 
 
-console.log(four)
+
+
 
