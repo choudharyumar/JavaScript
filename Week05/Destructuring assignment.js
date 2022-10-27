@@ -208,6 +208,10 @@ console.log(rest[1])
 
 
 
+console.log('hele we are from same planet')
+
+
+
 
 
 
