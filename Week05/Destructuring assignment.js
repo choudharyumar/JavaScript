@@ -195,22 +195,143 @@
 
 
 
-let obj={
-    title:'menu',
-    width:100,
-    height:300
-}
+// let obj={
+//     title:'menu',
+//     width:100,
+//     height:300
+// }
 
-let {tittle, ...rest}=obj;
-console.log(tittle)
-console.log(rest[0])
-console.log(rest[1])
+// let {title, ...rest}=obj;
+// console.log(title)
+// console.log(rest.width)
+// console.log(rest.height)
 
 
 
-console.log('hy are everyone')
-console.log('you are every one')
 
+
+// Gotcha if there’s no let:
+
+// let title,length,width;
+// ({title,length,height}={title:'menu',height:100,length:200});
+// console.log(title)
+// console.log(length)
+// console.log(height)
+
+
+
+
+
+// Nested destructuring:
+
+
+
+// let obj={
+//     size:{
+//         height:200,
+//         length:100,
+//     },
+//     extra:true,
+//     item:['xerox','ali'],
+
+// };
+// let {
+//     size:{
+//         height,
+//         length
+//     },
+//     item:[item1,item2],
+//     title='menu',
+//     extra
+
+// }=obj;
+// console.log(title)
+// console.log(height)
+// console.log(length)
+// console.log(item1)
+// console.log(item2)
+// console.log(extra)
+
+
+
+
+// Smart function parameters:
+// let obj={
+//     title:'menu',
+//     item:['ali','khizar']
+
+// }
+// function showMenu({
+//     title='untitled',
+//     height:h=200,
+//     length:l=100,
+//     item:[item1,item2]
+// })
+
+// {
+//     console.log(`${title}:${h}:${l}`);
+//     console.log(item1)
+//     console.log(item2)
+// }
+// showMenu(obj);
+
+
+
+
+
+
+
+// We can fix this by making {} the default value for the whole object of parameters:
+
+
+// function showMenu({
+//     title='menu',
+//     height:h=200,
+//     length:l=100,
+//      }={}
+// )
+// {
+//     console.log(`${title}:${h}:${l}`);
+// }
+// showMenu();
+
+
+
+
+// tasks 1:
+
+// let user = { name: "John", years: 30 };
+
+// let {name,years:age,isAdmin=false}=user;
+
+// console.log( name ); // John
+// console.log( age ); // 30
+// console.log( isAdmin ); // false
+
+
+// tasks 2:
+
+let salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+  };
+
+  function topSalary(salaries) {
+
+    let maxSalary = 0;
+    let maxName = null;
+  
+    for(const [name, salary] of Object.entries(salaries)) {
+      if (maxSalary < salary) {
+        maxSalary = salary;
+        maxName = name;
+      }
+    }
+  
+    return maxName;
+  }
+console.log(topSalary(salaries));
 
 
 
