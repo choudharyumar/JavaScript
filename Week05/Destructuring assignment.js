@@ -335,6 +335,9 @@ console.log(topSalary(salaries));
 
 
 
+console.log('every thing is alright')
+
+
 
 
 
