@@ -224,9 +224,129 @@
 // to check event loop
 
 
-console.log('hi')
-setTimeout(function()
-{
-    console.log('how are you')
-},500);
-console.log('after all this')
+// console.log('hi')
+// setTimeout(function()
+// {
+//     console.log('how are you')
+// },500);
+// console.log('after all this')
+
+
+// task 1:
+
+
+// Feb 20, 2012, 3:12am.
+// let date=new Date(2012,01,20,3,12)
+// console.log(date)
+
+
+
+
+// task 2:
+// Show a weekday:
+
+// function getWeekDay(date){
+   
+//     let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+//     return days[date.getDay()];
+
+// }
+// let date = new Date(2012, 0, 1);  // 3 Jan 2012
+// console.log( getWeekDay(date) ); 
+// console.log(date.getDate())
+// console.log(date.getDay())
+
+
+
+
+// task 3
+// getLocalDay(date)  //eurpoen date
+// function getLocalDay(date) {
+
+//     let day = date.getDay();
+  
+//     if (day == 0) { // weekday 0 (sunday) is 7 in european
+//       day = 7;
+//     }
+  
+//     return day;
+//   }
+
+//    date = new Date(2012, 0, 5);  // 3 Jan 2012
+//   console.log( getLocalDay(date) );
+// function getWeekDay(date){
+   
+
+
+//     let days = [ 'MO', 'TU', 'WE', 'TH', 'FR', 'SA','SU'];
+//     return days[date.getDay()];
+
+// }
+// let date = new Date(2012, 0, 3);  // 3 Jan 2012
+// console.log( getWeekDay(date) ); 
+// console.log(date.getDate())
+// console.log(date.getDay())
+
+
+
+
+
+
+// function getWeekDay(date) {
+//     let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+  
+//     return days[date.getDay()];
+//   }
+  
+//   let date = new Date(2022, 09, 31); // 3 Jan 2014
+//   console.log( getWeekDay(date) );
+//   console.log(date.getDate())
+// console.log(date.getDay())
+
+
+// How many seconds have passed today?
+
+ function getSecondsToday(){
+    let now =new Date();
+
+    let today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+    let  diff=now-today;
+    return Math.round(diff/1000);
+ }
+ console.log(getSecondsToday())
+
+
+
+//  function getSecondsToday() 
+ 
+//     let d = new Date();
+//     let a=d;
+//     a= d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds() ;
+  
+  
+//   console.log( a );
+
+
+//   How many seconds till tomorrow?
+
+
+// function getSecondsToda() {
+//     let d = new Date();
+//     return d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds()
+//      ;
+//   }
+  
+//   console.log( getSecondsToda() );
+  let d = new Date();
+  let a=d;
+  a= (d.getHours()+24)* 3600 + d.getMinutes() * 60 + d.getSeconds() ;
+
+
+console.log( a );
+
+let f = new Date();
+let g=f;
+g= f.getHours()* 3600 + f.getMinutes() * 60 + f.getSeconds() ;
+
+
+console.log( g*2 );
