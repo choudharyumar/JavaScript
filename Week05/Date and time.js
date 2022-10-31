@@ -221,10 +221,12 @@
 //  console.log(qux)
 
 
+// to check event loop
+
 
 console.log('hi')
 setTimeout(function()
 {
     console.log('how are you')
-},5000);
+},500);
 console.log('after all this')
