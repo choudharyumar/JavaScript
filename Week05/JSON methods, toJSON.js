@@ -84,17 +84,168 @@
 
 
 
-  let room = {
-    number: 23
-  };
+  // let room = {
+  //   number: 23
+  // };
   
-  let meetup = {
-    title: "Conference",
-    participants: ["john", "ann"]
-  };
+  // let meetup = {
+  //   title: "Conference",
+  //   participants: ["john", "ann"]
+  // };
   
-  meetup.place = room;       // meetup references room
-  room.occupiedBy = meetup; // room references meetup
+  // meetup.place = room;       // meetup references room
+  // room.occupiedBy = meetup; // room references meetup
   
-  console.log(JSON.stringify(meetup));
+  // console.log(JSON.stringify(meetup));// gives error (converting circular)
+
+
+
+  // Excluding and transforming: replacer:
+
+
+  // let room = {
+  //   number: 23
+  // };
+  
+  // let meetup = {
+  //   title: "Conference",
+  //   participants: ["john", "ann"],
+  //   place:room
+  // };
+  
+  // room.occupiedBy = meetup; // room references meetup
+  
+  // console.log(JSON.stringify(meetup,['title','participants']));
+
+
+
+// for the properties of romm obj
+
+  // let room = {
+  //   number: 23
+  // };
+  
+  // let meetup = {
+  //   title: "Conference",
+  //   participants: ["john", "ann"],
+  //   place:room
+  // };
+  
+  // room.occupiedBy = meetup; // room references meetup
+  
+  // console.log(JSON.stringify(meetup,['title','participants','place','number']));
+
+
+
+
+  // now we use a replacer function for occupiedby:
+
+  // let room = {
+  //   number: 23
+  // };
+  
+  // let meetup = {
+  //   title: "Conference",
+  //   participants: ["john", "ann"],
+  //   place:room
+  // };
+  
+  // room.occupiedBy = meetup; // room references meetup
+  
+  // console.log(JSON.stringify(meetup,function replacer(key ,value){
+  //   console.log(`${key}: ${value}`)
+  //   return (key =='occupiedBy')?  undefined:value;
+  // }));
+
+
+
+
+
+  // Formatting: space:
+
+
+
+//   let room = {
+//     number: 23,
+
+//   class:'5th',
+  
+//    meetup : {
+//     title: "Conference",
+//     participants: ["john", "ann"],
+//   }
+// }
+// console.log(JSON.stringify(room,null,4))
+
+
+
+
+// Custom “toJSON”
+
+// let room = {
+//   number: 23,
+
+// class:'5th',
+
+// }
+
+
+//  let meetup = {
+//   title: "Conference",
+//   date:new Date(),
+//   participants: ["john", "ann"],
+//   room
+// }
+
+// console.log(JSON.stringify(meetup))
+
+
+
+
+// let room = {
+//   number: 23,
+
+// toJSON(){
+//   return this.number;
+// },
+
+// }
+
+//  let meetup = {
+//   title: "Conference",
+//   date:new Date(),
+//   participants: ["john", "ann"],
+//   room
+// }
+// console.log(JSON.stringify(room))//23
+
+// console.log(JSON.stringify(meetup))
+
+
+
+
+// JSON.parse:
+
+
+
+// stringified array
+
+
+let numbers = "[0, 1, 2, 3]";
+
+numbers = JSON.parse(numbers);
+
+console.log( numbers[3] ); // 1
+
+
+// Or for nested objects:
+
+let userData = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+
+let user = JSON.parse(userData);
+
+console.log( user.age[0] ); // 1
+
+
+
 
