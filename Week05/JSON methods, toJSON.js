@@ -248,4 +248,8 @@ console.log( user.age[0] ); // 1
 
 
 
+console.log('hy boy')
+
+
+
 
