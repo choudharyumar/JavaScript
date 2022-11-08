@@ -231,25 +231,96 @@
 // stringified array
 
 
-let numbers = "[0, 1, 2, 3]";
+// let numbers = "[0, 1, 2, 3]";
 
-numbers = JSON.parse(numbers);
+// numbers = JSON.parse(numbers);
 
-console.log( numbers[3] ); // 1
+// console.log( numbers[3] ); // 1
+
+
 
 
 // Or for nested objects:
 
-let userData = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+// let userData = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
 
-let user = JSON.parse(userData);
+// let user = JSON.parse(userData);
 
-console.log( user.age[0] ); // 1
-
-
-
-console.log('hy boy')
+// console.log( user.age[0] ); // 1
 
 
 
+// console.log('hy boy')
 
+
+
+
+// Using reviver:
+
+// let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+// let meetup=JSON.parse(str);
+// // console.log(meetup.date.getdate())//error
+// console.log(meetup.date)//2017-11-30T12:00:00.000Z
+
+
+
+// correct approach:
+
+// let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+// let meetup=JSON.parse(str,function (key , value){
+// if (key=='date')return new Date(value)
+// return value;
+// });
+// console.log(meetup.date.getDate())
+
+
+// for nested Objects 
+// let schedule = `{
+//   "meetups": [
+//     {"title":"Conference","date":"2017-11-30T12:00:00.000Z"},
+//     {"title":"Birthday","date":"2017-04-18T12:00:00.000Z"}
+//   ]
+// }`;
+//  schedule=JSON.parse(schedule,function (key , value){
+//   if (key=='date')return new Date(value)
+//   return value;
+//   });
+//   console.log(schedule. meetups[0].date.getDate())
+//   console.log(schedule. meetups[1].date.getDate())
+
+
+
+
+  // task 1:
+
+
+  // let user = {
+  //   name: "John Smith",
+  //   age: 35
+  // };
+  // let json=JSON.parse(JSON.stringify(user))
+  // console.log(json.name)
+  // console.log(json.age)
+
+
+
+// task2
+
+  let room = {
+    number: 23
+  };
+  
+  let meetup = {
+    title: "Conference",
+    occupiedBy: [{name: "John"}, {name: "Alice"}],
+    place: room
+  };
+  
+  // circular references
+  room.occupiedBy = meetup;
+  meetup.self = meetup;
+  
+  console.log( JSON.stringify(meetup, function replacer(key, value) {
+    return (key != "" && value == meetup) ? undefined : value;
+  }));
+  
