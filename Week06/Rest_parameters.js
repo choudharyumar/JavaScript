@@ -92,3 +92,25 @@ console.log(merged)
 let str ='hello boy';
 // console.log([...str])
 console.log(Array.from(str))// it is used for universal level
+
+
+// Copy an array/object:
+
+
+let arr=[1,2,3,4]
+let copyarr=[...arr]
+arr.push(5)
+arr.pop(3)
+// arr.shift(10)
+arr.unshift(10)
+console.log(arr)
+console.log(copyarr)
+
+
+// we use it for also object
+let obj1={a:1,b:2,c:3}
+let objcopy={...obj1}
+obj1.d=5
+console.log(JSON.stringify (obj1))
+console.log(objcopy)
+
