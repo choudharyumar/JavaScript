@@ -34,12 +34,46 @@
 // nested functions:
 
 
-function name(firstname,lastname){
-    function fname(){
-        return firstname+' '+lastname;
-    }
-    console.log('hello',fname())
-    console.log('ali',fname())
+// function name(firstname,lastname){
+//     function fname(){
+//         return firstname+' '+lastname;
+//     }
 
+//     console.log('hello',fname())
+//     console.log('jnab',fname())
+
+// }
+//   name('umar','hayat')
+
+
+//   makeCounter creates the “counter” function that returns the next number on each invocation:
+// function count(){
+  
+//     function newc(){
+//         let counter=0;
+//         let c=counter
+//         return ++c;
+       
+//     }
+//     console.log(newc())
+    
+// }
+//  count();
+
+
+ function count()
+ {
+  let counter =0;
+    return function newc()
+   {
+        return ++counter;
+       
+    }
+    // newc()
+    
+    
 }
-console.log(name())
+let a=count()
+ console.log(a());
+
+
