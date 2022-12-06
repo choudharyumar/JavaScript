@@ -64,12 +64,13 @@
  function count()
  {
   let counter =0;
+  
     return function newc()
    {
         return ++counter;
        
     }
-    // newc()
+   
     
     
 }
