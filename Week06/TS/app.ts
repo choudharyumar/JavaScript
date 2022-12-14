@@ -14,10 +14,13 @@ console.log(
 
 let a=5;
 console.log(typeof a)
-let age:number|'died'|"unknown";
+let age:number|'died'|string;
 age=90;
 age='died';
 age='unknown';
 age='living';
 console.log(age)
 
+
+// optional
+age?.toUpperCase();// thi check if its ok than it returns other wise its optional 

@@ -170,12 +170,142 @@
 
 
 
-let name = "John";
+// let name = "John";
 
-function sayHi() {
-  console.log("Hi, " + name);
+// function sayHi() {
+//   console.log("Hi, " + name);
+// }
+
+// name = "Pete";
+
+// sayHi(); 
+
+
+
+// Write function sum that works like this: sum(a)(b) = a+b.
+// function sum(a){
+ 
+//   return function(b){
+//     return a+b;
+//   }
+// }
+// console.log(sum(1)(3))
+
+
+// let x = 1;
+
+// function func() {
+//   let x = 2;
+
+//   console.log(x); // ?
+
+// }
+
+// func();
+
+
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// let result=arr.filter(abc)
+// function abc(index){
+//   return index > 2 && index < 7 
+// }
+
+// console.log(result)//3,4,5,6
+
+
+
+
+
+
+
+
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+let arr2=[1, 2, 10]
+let n=arr.filter(e => arr2.indexOf(e) > -1 ? true : false); // [1]
+console.log(n)
+
+
+
+
+
+
+// let users = [
+//   { name: "John", age: 20, surname: "Johnson" },
+//   { name: "Pete", age: 18, surname: "Peterson" },
+//   { name: "Ann", age: 19, surname: "Hathaway" }
+// ];
+
+// function byField(fieldname){
+//   return (a,b)=>a[fieldname] > b[fieldname]?1:-1;
+// }
+// console.log(users.sort(byField('name')));
+// console.log(users.sort(byField('age')));
+
+
+
+
+
+// function makeArmy() {
+//   let shooters = [];
+
+//   let i = 0;
+//   while (i < 10) {
+//     let shooter = function() { 
+//       alert( i ); 
+//     };
+//     shooters.push(shooter); 
+//     i++;
+//   }
+
+
+//   return shooters;
+// }
+
+// let army = makeArmy();
+
+// // all shooters show 10 instead of their numbers 0, 1, 2, 3...
+// army[0](); // 10 from the shooter number 0
+// army[1](); // 10 from the shooter number 1
+// army[2](); // 10 ...and so on.
+
+
+
+
+// // global variable:
+
+
+// function g(){
+//   let a=10;
+//   console.log(a)
+// }
+// g()
+
+
+// function f(){
+
+//   console.log(b)
+//   var b=10;;
+// }
+// f()
+
+
+// for (var i=0;i<5;i++)
+// {
+//   var one=123;/// here we use let than it gives an error
+//   console.log (i)
+// }
+// console.log(one)// we declare it inside the code block but call it outside than var also works
+
+
+
+
+
+
+// global object :
+
+user={
+  name:'john'
 }
-
-name = "Pete";
-
-sayHi(); 
+console.log(user.name)

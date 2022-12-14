@@ -108,6 +108,7 @@ console.log(copyarr)
 
 
 // we use it for also object
+
 let obj1={a:1,b:2,c:3}
 let objcopy={...obj1}
 obj1.d=5
