@@ -9,7 +9,7 @@
 //     }
 // }
 // let f=user.ab
-// setTimeout(f,2000)// in this it dsnt shoe the first name
+// setTimeout(f,2000)// in this it dsnt shoes the first name
 
 
 
@@ -78,21 +78,41 @@
 
 // (3)
 
-let user ={
+// let user ={
+//     fname:"umar",
+//     ab(){
+//         console.log(`"hello",${this.fname}`)
+//     }
+// }
+// let abc=user.ab.bind(user)
+// setTimeout(() => {abc()
+    
+// },2000);
+
+//  user={
+//     ab(){
+//         console.log("i am in the settimeout")
+//     }
+//  }
+
+
+//  (4)
+
+let user={
     fname:"umar",
-    ab(){
-        console.log(`"hello",${this.fname}`)
+    ab(pharse){
+        console.log(`"ali",${pharse},${this.fname}`)
     }
 }
 let abc=user.ab.bind(user)
-setTimeout(() => {abc()
-    
-},2000);
 
- user={
-    ab(){
-        console.log("i am in the settimeout")
-    }
- }
+setTimeout(() => {abc("hello")
+    
+}, 2000);
+
+setTimeout(() => {abc("hy")
+    
+}, 2000);
+abc("janab")
 
 
