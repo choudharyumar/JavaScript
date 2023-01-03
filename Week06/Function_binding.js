@@ -1,4 +1,3 @@
-// console.log("When you are a programer and find a girl that cares you and loves you")
 
 // Losing this:
 // let user={
@@ -114,5 +113,8 @@ setTimeout(() => {abc("hy")
     
 }, 2000);
 abc("janab")
+
+
+console.log("hello")
 
 
