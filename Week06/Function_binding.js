@@ -97,24 +97,101 @@
 
 //  (4)
 
+// let user={
+//     fname:"umar",
+//     ab(pharse){
+//         console.log(`"ali",${pharse},${this.fname}`)
+//     }
+// }
+// let abc=user.ab.bind(user)
+
+// setTimeout(() => {abc("hello")
+    
+// }, 2000);
+
+// setTimeout(() => {abc("hy")
+    
+// }, 2000);
+// abc("janab")
+
+
+
+
+// Partial functions
+
+
+// (1)
+
+// function mul(a,b){
+//     return a*b
+// }
+// let ab=mul.bind(null,2)
+// console.log(ab(3))
+
+
+
+// // (2)
+// function mul(a,b){
+//     return a*b
+// }
+// let cd=mul.bind(null,3)
+// console.log(cd(3))
+
+
+
+// Going partial without context:
+
+function partial(func, ...argsBound) {
+    return function(...args) { // (*)
+      return func.call(this, ...argsBound, ...args);
+    }
+  }
 let user={
     fname:"umar",
-    ab(pharse){
-        console.log(`"ali",${pharse},${this.fname}`)
+    say(time,pharse){
+        console.log(`${time},${this.fname},${pharse}`)
+
     }
 }
-let abc=user.ab.bind(user)
+// add a partial method with fixed time
+// user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes());
+// add a partial method with fixed time
+user.sayNow = partial(user.say, 2 + ':' + 3);
+ user.sayNow("hy")
 
-setTimeout(() => {abc("hello")
-    
-}, 2000);
+// let user={
+//     fname:"umar",
+//     say(time,pharse){
+//         console.log(`${time},${this.fname},${pharse}`)
 
-setTimeout(() => {abc("hy")
-    
-}, 2000);
-abc("janab")
+//     }
+// }
+// user.say(2,"hayat")
 
 
-console.log("hello")
+// let d=user.say.bind(user)
+// setTimeout(()=>d(2,"hayat")
+// ,2000)
 
-console.log("yr sirf github py streak bnany sy kuch nai ho ga")
+
+
+
+// diff of bind and call
+
+// const person = {
+//     firstName:"John",
+//     lastName: "Doe",
+//     fullName: function() {
+//       return this.firstName + " " + this.lastName;
+//     }
+//   }
+  
+//   const member = {
+//     firstName:"Hege",
+//     lastName: "Nilsen",
+//   }
+  
+// //   let ab = person.fullName.bind(member);// bind return the function and we used in future of program
+//   let ab = person.fullName.call(member);// in call we only use the value for once 
+  
+//   console.log(ab)
