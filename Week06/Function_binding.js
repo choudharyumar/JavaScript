@@ -132,32 +132,32 @@
 
 // // (2)
 // function mul(a,b){
-//     return a*b
+//     console.log(a*b) 
 // }
 // let cd=mul.bind(null,3)
-// console.log(cd(3))
+// cd(3)
 
 
 
 // Going partial without context:
 
-function partial(func, ...argsBound) {
-    return function(...args) { // (*)
-      return func.call(this, ...argsBound, ...args);
-    }
-  }
-let user={
-    fname:"umar",
-    say(time,pharse){
-        console.log(`${time},${this.fname},${pharse}`)
+// function partial(func, ...argsBound) {
+//     return function(...args) { // (*)
+//       return func.call(this, ...argsBound, ...args);
+//     }
+//   }
+// let user={
+//     fname:"umar",
+//     say(time,pharse){
+//         console.log(`${time},${this.fname},${pharse}`)
 
-    }
-}
-// add a partial method with fixed time
-// user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes());
-// add a partial method with fixed time
-user.sayNow = partial(user.say, 2 + ':' + 3);
- user.sayNow("hy")
+//     }
+// }
+// // add a partial method with fixed time
+// // user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes());
+// // add a partial method with fixed time
+// user.sayNow = partial(user.say, 2 + ':' + 3);
+//  user.sayNow("hy")
 
 // let user={
 //     fname:"umar",
@@ -195,3 +195,88 @@ user.sayNow = partial(user.say, 2 + ':' + 3);
 //   let ab = person.fullName.call(member);// in call we only use the value for once 
   
 //   console.log(ab)
+
+
+
+
+
+// practice problems
+
+
+// function f() {
+//   console.log( this ); // null
+// }
+
+// let user = {
+//   g: f.bind(null)
+// };
+
+// user.g();
+
+
+
+
+
+
+// function sayHi() {
+//   console.log( this.name );
+// }
+// sayHi.test = 5;
+
+// let bound = sayHi.bind({
+//   name: "John"
+// });
+
+// console.log( bound() ); 
+
+
+
+
+// function sayHi() {
+// name="umar"
+
+//   console.log( this.name );
+// }
+// sayHi.test = 5;
+
+
+// console.log(sayHi.test)
+// sayHi()
+// let bound = sayHi.bind({
+//   name: "John"
+// });
+
+// console.log( bound() ); 
+
+
+
+
+
+function askPassword(ok, fail) {
+  let password = prompt("Password?", '');
+  if (password == "rockstar") ok();
+  else fail();
+}
+
+let user = {
+  name: 'John',
+
+  loginOk() {
+    console.log(`${this.name} logged in`);
+  },
+
+  loginFail() {
+    console.log(`${this.name} failed to log in`);
+  },
+
+};
+
+// askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+//...
+// askPassword(() => user.loginOk(), () => user.loginFail());
+
+
+let c=user.loginOk.bind(user)
+let f=user.loginFail.bind(user)
+
+askPassword(c)
