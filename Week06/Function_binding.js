@@ -273,10 +273,13 @@ let user = {
 
 // askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
 //...
-// askPassword(() => user.loginOk(), () => user.loginFail());
+askPassword(() => user.loginOk(), () => user.loginFail());
 
 
-let c=user.loginOk.bind(user)
-let f=user.loginFail.bind(user)
+// let c=user.loginOk.bind(user)
+// let f=user.loginFail.bind(user)
 
-askPassword(c)
+// askPassword(c,f)
+
+
+console.log("umar")
