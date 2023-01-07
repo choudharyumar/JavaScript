@@ -282,4 +282,3 @@ askPassword(() => user.loginOk(), () => user.loginFail());
 // askPassword(c,f)
 
 
-console.log("umar")
