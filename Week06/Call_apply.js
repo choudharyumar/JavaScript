@@ -73,7 +73,7 @@
     
 // }
 // let Details=function(a,b,c){//this function is present outside the objecct user
-//      console.log(this.Name+" "+a+" "+b+" "+c)
+//      console.log(this.Name+" "+a+" "+b+" "+c+1)
 
 // }
 // Details.apply(user,["janb","good","heavy"])
@@ -88,9 +88,9 @@
 //     Designation:"Computer Engineers",
     
 // }
-// let Details=function(a){//this function is present outside the objecct user
+// let Details=function(a,b,c){//this function is present outside the objecct user
 //     // console.log(this.Name+" "+a+" "+b)
-//      console.log(this.Name+" "+a)
+//      console.log(this.Name+" "+a +" "+b+ 1+c)
 
 // }
 // Details.call(user,["janb","good","heavy"])
@@ -111,4 +111,4 @@ let Details=function(a){//this function is present outside the objecct user
 
 }
 let c=Details.bind(user,["janb","good","heavy"])
-c()// in this we make a copy of a function by using the bind  we use it in future 
+ c()// in this we make a copy of a function by using the bind  we use it in future 
