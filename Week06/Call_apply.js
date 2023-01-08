@@ -112,3 +112,6 @@ let Details=function(a){//this function is present outside the objecct user
 }
 let c=Details.bind(user,["janb","good","heavy"])
  c()// in this we make a copy of a function by using the bind  we use it in future 
+
+
+ console.log("o yr asy kam nai chly ga")
