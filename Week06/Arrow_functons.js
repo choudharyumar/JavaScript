@@ -56,3 +56,6 @@ group.show()
   // }
   // let cd=ab(bc,2000)
   // cd("khizar")
+
+
+  console.log("hello")

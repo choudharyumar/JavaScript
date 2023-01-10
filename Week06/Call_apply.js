@@ -9,7 +9,7 @@
 //         console.log(this.Name)
 //     }
 // }
-// // user.Details()
+// user.Details()
 
 
 // let user2={
@@ -36,7 +36,8 @@
 // let Details=function(){//this function is present outside the objecct user
 //     console.log(this.Name)
 // }
-// Details.call(user)// we use this by call
+// // Details.call(user)// we use this by call
+
 
 
 // let user2={
@@ -90,7 +91,7 @@
 // }
 // let Details=function(a,b,c){//this function is present outside the objecct user
 //     // console.log(this.Name+" "+a+" "+b)
-//      console.log(this.Name+" "+a +" "+b+ 1+c)
+//      console.log(this.Name+" "+a +" "+b+c+1)
 
 // }
 // Details.call(user,["janb","good","heavy"])
@@ -100,18 +101,17 @@
 
 // bind:
 
-let user={
-    Name:"umar",
-    Age:22,
-    Designation:"Computer Engineers",
+// let user={
+//     Name:"umar",
+//     Age:22,
+//     Designation:"Computer Engineers",
     
-}
-let Details=function(a){//this function is present outside the objecct user
-     console.log(this.Name+" "+a)
+// }
+// let Details=function(a){//this function is present outside the objecct user
+//      console.log(this.Name+" "+a)
 
-}
-let c=Details.bind(user,["janb","good","heavy"])
- c()// in this we make a copy of a function by using the bind  we use it in future 
+// }
+// let c=Details.bind(user,["janb","good","heavy"])
+//  c()// in this we make a copy of a function by using the bind  we use it in future 
 
 
- console.log("o yr asy kam nai chly ga")
