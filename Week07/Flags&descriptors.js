@@ -81,17 +81,17 @@
 
 
 
-let user={}
-Object.defineProperty(user,"name",{
-    value:"hamza",
-    writable:true,
-    enumerable:true,
-    configurable:true,
-})
-user.name="khizar"
-let descriptor=Object.getOwnPropertyDescriptor(user,"name")
-console.log(descriptor)
-console.log(user.name)//khizar
+// let user={}
+// Object.defineProperty(user,"name",{
+//     value:"hamza",
+//     writable:true,
+//     enumerable:true,
+//     configurable:true,
+// })
+// user.name="khizar"
+// let descriptor=Object.getOwnPropertyDescriptor(user,"name")
+// console.log(descriptor)
+// console.log(user.name)//khizar
 
 
 
@@ -104,7 +104,7 @@ console.log(user.name)//khizar
 //     }
 // }
 // Object.defineProperty(user,"name",{
-//     // enumerable:true
+//      enumerable:true
 
 // })
 // console.log(user.name)
@@ -113,6 +113,46 @@ console.log(user.name)//khizar
 // console.log(ba)
 // for(let key in user)
 // console.log(key)
+
+
+
+// (2)
+
+
+// let user={
+//     name:"umar",
+//     toString(){
+//         return this.name
+//     }
+// }
+// Object.defineProperty(user,"toString",{
+//      enumerable:false
+
+// })
+// console.log(user.name)
+
+// let ba=Object.getOwnPropertyDescriptor(user,"toString")
+// console.log(ba)
+// for(let key in user)
+// console.log(key)
+
+
+
+// configureable:
+
+
+let user = {
+  name: "John"
+};
+
+Object.defineProperty(user, "name", {
+    writable:false,
+  configurable: false// if it is false and writable also than value cannot bi changed all the time
+});
+
+user.name = "Pete"; // works fine
+delete user.name; // Error
+console.log(user.name)
 
 
 
